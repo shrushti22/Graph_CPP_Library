@@ -6,20 +6,23 @@ using namespace std;
 
 #include "graph.hpp"
 
-Graph::Graph(bool isDirected = false, bool isWeighted = false)
+template <typename T>
+Graph<T>::Graph(bool isDirected, bool isWeighted)
 {
     this->size = 0;
     this->isDirected = isDirected;
     this->isWeighted = isWeighted;
 }
 
-void Graph::addNode(int val)
+template <typename T>
+void Graph<T>::addNode(T val)
 {
-    this->mp[val] = vector<pair<int, int>>();
+    this->mp[val] = vector<pair<T, int>>();
     this->size++;
 }
 
-void Graph::addEdge(int src, int dest, int weight = 1)
+template <typename T>
+void Graph<T>::addEdge(T src, T dest, int weight)
 {
     this->mp[src].push_back(make_pair(dest, weight));
 
@@ -27,7 +30,8 @@ void Graph::addEdge(int src, int dest, int weight = 1)
         this->mp[dest].push_back(make_pair(src, weight));
 }
 
-void Graph::print()
+template <typename T>
+void Graph<T>::print()
 {
     for (auto it = this->mp.begin(); it != this->mp.end(); it++)
     {
@@ -36,6 +40,12 @@ void Graph::print()
             cout << "(" << it2->first << ", " << it2->second << ") ";
         cout << endl;
     }
+}
+
+template <typename T>
+int Graph<T>::getSize()
+{
+    return this->size;
 }
 
 #endif

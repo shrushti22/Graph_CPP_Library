@@ -13,7 +13,7 @@ set(SRC_DIR "./src" )
 # set(TEST_EXE "tests.exe")
 
 # files
-file(GLOB INC_DIRS "./include/*/" "./include")
+file(GLOB INC_DIRS "./include/*/" "./include" "./src/*/")
 file(GLOB INC_FILES "./include/cpplib.hpp")
 
 # main project name 
@@ -26,11 +26,11 @@ add_executable(${PROJECT_NAME} ${MAIN_CPP})
 include_directories(${INC_DIRS})
 
 # cpplib building src
-add_subdirectory(${SRC_DIR})
+# add_subdirectory(${SRC_DIR})
 # add_subdirectory(${TEST_DIR})
 
 # linking cpplib with main project
-target_link_libraries(${PROJECT_NAME} ${LIBRARY})
+# target_link_libraries(${PROJECT_NAME} ${LIBRARY})
 
 # installation 
 # install(FILES ${INC_FILES} DESTINATION include)

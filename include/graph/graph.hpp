@@ -4,19 +4,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+template <typename T>
 class Graph
 {
 private:
     int size;
     bool isDirected;
     bool isWeighted;
-    unordered_map<int, vector<pair<int, int>>> mp;
+    unordered_map<T, vector<pair<T, int>>> mp;
 
 public:
-    Graph(bool isDirected, bool isWeighted);
-    void addNode(int val);
-    void addEdge(int src, int dest, int weight);
+    Graph(bool isDirected = false, bool isWeighted = false);
+    void addNode(T val);
+    void addEdge(T src, T dest, int weight = 1);
     void print();
+    int getSize();
 };
 
 #endif
