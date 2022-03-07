@@ -39,5 +39,28 @@ int main()
 
     g.print();
 
+    cout << g.shortestDist(1, 10) << endl;
+    
+    vector<pair<int, int>> v = g.shortestDist(1);
+    for(auto it = v.begin(); it != v.end(); it++)
+        cout << it->first << " " << it->second << endl;
+    
+    vector<int> v2 = g.topologicalSort();
+    for(auto it = v2.begin(); it != v2.end(); it++)
+        cout << *it << " ";
+    
+    cout << endl;
+
+    cout << g.inDegree(10) << endl;
+    cout << g.outDegree(10) << endl;
+
+    vector<int> v3 = g.getAllNodes();
+    for(auto it = v3.begin(); it != v3.end(); it++)
+        cout << *it << " ";
+
+    cout << endl;
+
+    cout << g.isCyclic() << endl;
+    
     return 0;
 }

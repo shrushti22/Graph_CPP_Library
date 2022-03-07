@@ -1,8 +1,9 @@
-# files
-file(GLOB SRC_FILES "./*/*.cpp")
+# # files
+# file(GLOB SRC_FILES "./*/*.cpp")
 
-# adding library
-add_library(${LIBRARY} ${SRC_FILES})
+# # adding library
+# add_library(${LIBRARY} ${SRC_FILES})
 
-# installation
-install(TARGETS ${LIBRARY} DESTINATION lib)
+
+# # installation
+# install(TARGETS ${LIBRARY} DESTINATION lib)
