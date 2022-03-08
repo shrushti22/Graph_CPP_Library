@@ -9,11 +9,11 @@ set(LIBRARY "cpplib")
 
 set(MAIN_CPP "./example/main.cpp")
 set(SRC_DIR "./src" )
-# set(TEST_DIR "./tests")
-# set(TEST_EXE "tests.exe")
+set(TEST_DIR "./tests")
+set(TEST_EXE "tests.exe")
 
 # files
-file(GLOB INC_DIRS "./include/*/" "./include" "./src/*/")
+file(GLOB INC_DIRS "./include/*/" "./include" "./src/*/" "./ext/*")
 file(GLOB INC_FILES "./include/cpplib.hpp")
 
 # main project name 
@@ -27,7 +27,7 @@ include_directories(${INC_DIRS})
 
 # cpplib building src
 # add_subdirectory(${SRC_DIR})
-# add_subdirectory(${TEST_DIR})
+add_subdirectory(${TEST_DIR})
 
 # linking cpplib with main project
 # target_link_libraries(${PROJECT_NAME} ${LIBRARY})
