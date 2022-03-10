@@ -13,5 +13,8 @@ run :
 test : 
 	cd ./build/tests && ./tests.exe	
 
-# install :
-# 	cd ./build && sudo make install
+install :
+	cd ./build && sudo make install
+
+uninstall :
+	cd ./build && sudo xargs rm < install_manifest.txt

@@ -36,6 +36,6 @@ public:
     vector<T> getAllNodes();
 };
 
-#include "graph.cpp"
+#include "graph_impl.hpp"
 
 #endif
