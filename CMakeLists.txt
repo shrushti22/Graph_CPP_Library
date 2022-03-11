@@ -13,9 +13,9 @@ set(TEST_DIR "./tests")
 set(TEST_EXE "tests.exe")
 
 # files
-file(GLOB INC_DIRS "./src/*/" "./ext/*" "./cpplib.hpp")
-file(GLOB INSTALL_DIR "./src" )
-file(GLOB INSTALL_FILE "./cpplib.hpp")
+file(GLOB INC_DIRS "./src/*/" "./ext/*" "./src")
+file(GLOB INSTALL_DIR "./src/graph" )
+file(GLOB INSTALL_FILE "./src/cpplib.hpp")
 
 # main project name 
 project(${PROJECT_NAME})
