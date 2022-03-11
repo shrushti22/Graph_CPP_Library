@@ -13,7 +13,7 @@ set(TEST_DIR "./tests")
 set(TEST_EXE "tests.exe")
 
 # files
-file(GLOB INC_DIRS "./include/*/" "./include" "./src/*/" "./ext/*")
+file(GLOB INC_DIRS "./src/*/" "./ext/*" "./cpplib.hpp")
 file(GLOB INSTALL_DIR "./src" )
 file(GLOB INSTALL_FILE "./cpplib.hpp")
 
