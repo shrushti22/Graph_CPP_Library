@@ -1,17 +1,33 @@
 # Graph CPP Library
 
-A library to help you built graph data structure.
+A library to help you with graph data structure.
 
 Library provides you with inbuilt functionalities of graph which will ease down your work of writing every functions from scratch. You can use this library same as the other standard C++ library thus reducing the load of remembering new syntax. 
 
 ### Requirements
-- cmake
-- cpp compiler
+- cmake (VERSION 3.16.3)
+- cpp compiler 
 
 ### Installation
 - Fork and Clone the repository
-- Build the library
-- Copy the library to your project
+- Go to the root directory of the repository and run the following command to build the library.
+```
+make all
+```
+- To the test the library run the following command.
+```
+make test
+```
+
+- To install the library run the following command.
+```
+make install
+```
+
+- To uninstall the library run the following command.
+```
+make uninstall
+```
 
 ### Usage
 
